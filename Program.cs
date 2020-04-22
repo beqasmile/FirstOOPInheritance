@@ -70,10 +70,10 @@ namespace FirstOOPInheritance
             allMovies.Add(myFourthMovie);
 
             List<Movie> allMovies1 = new List<Movie>();
-            allMovies.Add(movieDrama);
-            allMovies.Add(movieComedy);
-            allMovies.Add(movieAction);
-            allMovies.Add(movieDrama2);
+            allMovies1.Add(movieDrama);
+            allMovies1.Add(movieComedy);
+            allMovies1.Add(movieAction);
+            allMovies1.Add(movieDrama2);
 
 
             DramaMovie movieDramaNew = (DramaMovie) myFirstMovie;    // casting 
@@ -96,8 +96,35 @@ namespace FirstOOPInheritance
             }
 
             
+            foreach (Movie loopMovie in allMovies)
+            {
+                Console.Write("Movie => " );
+                Console.Write(" name " + loopMovie.GetMovieName());
+                Console.Write(" length " + loopMovie.GetMovieLength());
 
+                if (loopMovie is DramaMovie)
+                {
+                    Console.Write(" drama movie  hero name = " );
+                    DramaMovie movieDramaMovie = (DramaMovie)loopMovie;
 
+                    Console.Write(movieDramaMovie.DramaticHeroName);
+                }
+                else if (loopMovie is ComedyMovie)
+                {
+                    Console.Write(" comedy movie  Number Of Comic Heroes = ");
+                    ComedyMovie comedyMovie = (ComedyMovie)loopMovie;
+                    Console.Write(comedyMovie.NumberOfComicHeroes);
+                }
+                else if (loopMovie is ActionMovie)
+                {
+                    Console.Write(" action movie NameOfStuntmen.Capacity = ");
+                    ActionMovie actionMovie = (ActionMovie)loopMovie;
+                    Console.Write(actionMovie.NameOfStuntmen.Capacity);
+
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
         }
     }
 }
