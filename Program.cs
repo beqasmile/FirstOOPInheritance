@@ -43,6 +43,9 @@ namespace FirstOOPInheritance
             movieDrama.NameOfDramaticParts = dramaParts;
             movieDrama.SetMovieLength(30);
 
+            PrintMovie(movieDrama);
+            PrintMovie(movieAction);
+            PrintMovie(movieComedy);
 
             DramaMovie movieDrama2 = new DramaMovie();
 
@@ -98,34 +101,48 @@ namespace FirstOOPInheritance
             
             foreach (Movie loopMovie in allMovies)
             {
-                Console.Write("Movie => " );
-                Console.Write(" name " + loopMovie.GetMovieName());
-                Console.Write(" length " + loopMovie.GetMovieLength());
-
-                if (loopMovie is DramaMovie)
-                {
-                    Console.Write(" drama movie  hero name = " );
-                    DramaMovie movieDramaMovie = (DramaMovie)loopMovie;
-
-                    Console.Write(movieDramaMovie.DramaticHeroName);
-                }
-                else if (loopMovie is ComedyMovie)
-                {
-                    Console.Write(" comedy movie  Number Of Comic Heroes = ");
-                    ComedyMovie comedyMovie = (ComedyMovie)loopMovie;
-                    Console.Write(comedyMovie.NumberOfComicHeroes);
-                }
-                else if (loopMovie is ActionMovie)
-                {
-                    Console.Write(" action movie NameOfStuntmen.Capacity = ");
-                    ActionMovie actionMovie = (ActionMovie)loopMovie;
-                    Console.Write(actionMovie.NameOfStuntmen.Capacity);
-
-                }
-                Console.WriteLine();
-                Console.WriteLine();
+                PrintMovie(loopMovie);
+               
             }
+
+            ChildrenComedyMovie childrenComedyMovie = new ChildrenComedyMovie();
+            allMovies.Add(childrenComedyMovie);
+
+            PrintMovie(childrenComedyMovie);
+
+
             Console.ReadKey();
+        }
+
+        public static void PrintMovie(Movie movie )
+        {
+            Console.WriteLine("The movie is ");
+            Console.Write("Movie => ");
+            Console.Write(" name " + movie.GetMovieName());
+            Console.Write(" length " + movie.GetMovieLength());
+
+            if (movie is DramaMovie)
+            {
+                Console.Write(" drama movie  hero name = ");
+                DramaMovie movieDramaMovie = (DramaMovie)movie;
+
+                Console.Write(movieDramaMovie.DramaticHeroName);
+            }
+            else if (movie is ComedyMovie)
+            {
+                Console.Write(" comedy movie  Number Of Comic Heroes = ");
+                ComedyMovie comedyMovie = (ComedyMovie)movie;
+                Console.Write(comedyMovie.NumberOfComicHeroes);
+            }
+            else if (movie is ActionMovie)
+            {
+                Console.Write(" action movie NameOfStuntmen.Capacity = ");
+                ActionMovie actionMovie = (ActionMovie)movie;
+                Console.Write(actionMovie.NameOfStuntmen.Capacity);
+
+            }
+            Console.WriteLine();
+
         }
     }
 }
