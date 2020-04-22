@@ -123,6 +123,7 @@ namespace FirstOOPInheritance
 
                 }
                 Console.WriteLine();
+                Console.WriteLine();
             }
             Console.ReadKey();
         }
