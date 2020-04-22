@@ -1,0 +1,7 @@
+C:\dev\day6\FirstOOPInheritance\obj\Debug\FirstOOPInheritance.csprojAssemblyReference.cache
+C:\dev\day6\FirstOOPInheritance\obj\Debug\FirstOOPInheritance.csproj.CoreCompileInputs.cache
+C:\dev\day6\FirstOOPInheritance\bin\Debug\FirstOOPInheritance.exe.config
+C:\dev\day6\FirstOOPInheritance\bin\Debug\FirstOOPInheritance.exe
+C:\dev\day6\FirstOOPInheritance\bin\Debug\FirstOOPInheritance.pdb
+C:\dev\day6\FirstOOPInheritance\obj\Debug\FirstOOPInheritance.exe
+C:\dev\day6\FirstOOPInheritance\obj\Debug\FirstOOPInheritance.pdb
